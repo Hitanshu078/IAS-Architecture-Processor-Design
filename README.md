@@ -1,5 +1,5 @@
 # IAS Machine Simulation
-
+## Course: EG 212 - Computer Architecture - Processor Design
 ## Overview
 
 This project simulates an IAS (Institute for Advanced Study) machine, a theoretical computer model designed in the 1950s. The simulation includes basic operations such as load, store, arithmetic operations, jumps, and custom factorial and comparison functions.The IAS architecture is also known as the "IAS machine" or "Institute for Advanced Study machine." It was one of the early computer architectures developed by John von Neumann and his colleagues at the Institute for Advanced Study (IAS) in Princeton, New Jersey. The IAS machine is notable for being one of the first implementations of the stored-program concept, where both instructions and data are stored in memory. The machine uses a simple instruction set to perform operations on memory.
