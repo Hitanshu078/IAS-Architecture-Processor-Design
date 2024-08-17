@@ -1,0 +1,25 @@
+//Assembly code for calculating permutations
+LOAD M(X) 100 , CMP M(X) 101 
+SUB M(X) 101  , STOR M(X) 101 
+FACT M(X) 101 , STOR M(X) 101 
+FACT M(X) 100 , DIV M(X) 101
+
+Explanation :
+M(100) = n
+M(101) = r
+ 
+//LOAD M(X) 100 - It takes the value from M(100) and stores it in the accumulator . So now n is in stored in the accumulator
+ 
+// CMP M(X) 101 - This is a new instruction we made which checks if value in accumulator is greater than the value in M(101) or not , if not it stops the code.(Cause we are making permutation program where n has to be greater than r)
+
+// SUB M(X) 101 - This instruction substracts the value of M(101) from value stored in accumulator and stores it in accumulator.So value in the accumulator is n-r right now.
+
+// STOR M(X) 101 - It stores the value stored in the accumulator into the memory.So n-r is in the M(101) location now
+
+// FACT M(X) 101 - This is a new instruction we made which calculates the factorial of the value in memory and stores it in the accumulator. So the value in the accumulator is (n-r)! now.
+
+//STOR M(x) 101 - So now (n-r)! is stored in M(100) location
+
+// FACT M(X) 100 - SO now n! is calculated and stored in the accumulator
+
+// DIV M(X) 101 - This instruction divides the value stored in the accumulator by the value stored in the memory and stores the quotient in MQ and the remainder in accumulator . So it now divides n! by (n-r)! and the ans is stored in the MQ .
